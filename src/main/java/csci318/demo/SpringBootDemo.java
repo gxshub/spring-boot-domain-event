@@ -2,6 +2,7 @@ package csci318.demo;
 
 import csci318.demo.model.QuoteEvent;
 import csci318.demo.model.Quote;
+import csci318.demo.service.QuoteService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class SpringBootDemo {
 
 	private static final Logger log = LoggerFactory.getLogger(SpringBootDemo.class);
 	@Autowired
-	private ApplicationEventPublisher publisher;
+	private QuoteService quoteService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDemo.class, args);
@@ -42,8 +43,9 @@ public class SpringBootDemo {
 						"https://quoters.apps.pcfone.io/api/random", Quote.class);
 				assert quote != null;
 				log.info(quote.toString());
-				QuoteEvent quoteEvent = new QuoteEvent(quote);
-				publisher.publishEvent(quoteEvent);
+				quoteService.publishQuote(quote);
+				//QuoteEvent quoteEvent = new QuoteEvent(quote);
+				//publisher.publishEvent(quoteEvent);
 			}
 		};
 	}
