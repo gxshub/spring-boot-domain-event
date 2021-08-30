@@ -44,8 +44,6 @@ public class SpringBootDemo {
 				assert quote != null;
 				log.info(quote.toString());
 				quoteService.publishQuote(quote);
-				//QuoteEvent quoteEvent = new QuoteEvent(quote);
-				//publisher.publishEvent(quoteEvent);
 			}
 		};
 	}
