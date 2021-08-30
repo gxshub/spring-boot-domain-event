@@ -1,6 +1,5 @@
 package csci318.demo;
 
-import csci318.demo.model.QuoteEvent;
 import csci318.demo.model.Quote;
 import csci318.demo.service.QuoteService;
 import org.slf4j.Logger;
@@ -10,7 +9,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
