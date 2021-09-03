@@ -11,10 +11,15 @@ public class QuoteEvent {
     @Id
     @GeneratedValue
     private long id;
+
     @Column
     private String type;
-    @Column
-    private String stringValue;
+
+    @Column(name="value")
+    /** @valueRecord is a string format for a Value object.
+     * Here we use flat denormalization for object persistence.
+     */
+    private String valueRecord;
 
     public QuoteEvent() {
     }
@@ -22,7 +27,7 @@ public class QuoteEvent {
     public QuoteEvent(Quote quote) {
         super();
         this.setType(quote.getType());
-        this.setStringValue(quote.getValue().toString());
+        this.setValueRecord(quote.getValue().toString());
     }
 
     public long getId() {
@@ -41,11 +46,11 @@ public class QuoteEvent {
         this.type = type;
     }
 
-    public String getStringValue() {
-        return stringValue;
+    public String getValueRecord() {
+        return valueRecord;
     }
 
-    public void setStringValue(String stringValue) {
-        this.stringValue = stringValue;
+    public void setValueRecord(String valueRecord) {
+        this.valueRecord = valueRecord;
     }
 }
