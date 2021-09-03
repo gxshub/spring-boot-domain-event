@@ -37,8 +37,7 @@ public class SpringBootDemo {
 		return args -> {
 			//get 10 quotes
 			for (int i=0; i<10; i++) {
-				Quote quote = restTemplate.getForObject(
-						"https://quoters.apps.pcfone.io/api/random", Quote.class);
+				Quote quote = restTemplate.getForObject("https://quoters.apps.pcfone.io/api/random", Quote.class);
 				assert quote != null;
 				log.info(quote.toString());
 				quoteService.publishQuote(quote);
