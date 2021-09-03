@@ -16,7 +16,7 @@ public class QuoteService {
         this.publisher = publisher;
     }
 
-    public void publishQuote(Quote quote) {
+    public void recordQuote(Quote quote) {
         QuoteEvent quoteEvent = new QuoteEvent(quote);
         publisher.publishEvent(quoteEvent);
     }

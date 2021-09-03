@@ -40,7 +40,7 @@ public class SpringBootDemo {
 				Quote quote = restTemplate.getForObject("https://quoters.apps.pcfone.io/api/random", Quote.class);
 				assert quote != null;
 				log.info(quote.toString());
-				quoteService.publishQuote(quote);
+				quoteService.recordQuote(quote);
 			}
 		};
 	}
