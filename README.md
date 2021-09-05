@@ -1,4 +1,4 @@
-# Spring Boot - Domain Event
+# Spring Boot - Domain Events
 
 This simple application makes REST requests to this
 [URL](https://quoters.apps.pcfone.io/api/random) 
@@ -15,5 +15,5 @@ Open the following URL in your browser
 ```url
 http://localhost:8080/h2-console/
 ```
-and enter `jdbc:h2:mem:testdb` in the `JDBC URL` entry. 
+and change the value in the `JDBC URL` entry to `jdbc:h2:mem:testdb`.
 The events are in the `QUOTE_EVENT` table.
