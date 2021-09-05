@@ -1,4 +1,4 @@
-# Spring Boot Domain Event
+# Spring Boot - Domain Event
 
 This simple application makes REST requests to this
 [URL](https://quoters.apps.pcfone.io/api/random) 
