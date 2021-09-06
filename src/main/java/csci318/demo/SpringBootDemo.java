@@ -23,10 +23,12 @@ public class SpringBootDemo {
 		SpringApplication.run(SpringBootDemo.class, args);
 	}
 
+	// With @Bean annotation of the following method, a RestTemplate object is injected.
+	// But there is no need to define a separate method to return a RestTemplateBuilder object.
+	// This is due to the following reason:
 	// "In a typical auto-configured Spring Boot application
 	// this builder is available as a bean and can be injected
-	// whenever a RestTemplate is needed."
-	// -- from RestTemplateBuilder API Doc
+	// whenever a RestTemplate is needed." -- from RestTemplateBuilder API Doc
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder.build();
