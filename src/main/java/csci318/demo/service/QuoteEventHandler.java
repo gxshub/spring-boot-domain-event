@@ -15,7 +15,7 @@ public class QuoteEventHandler {
     }
 
     @EventListener
-    public void handlingEvent(QuoteEvent quoteEvent) {
+    public void handle(QuoteEvent quoteEvent) {
         quoteEventRepository.save(quoteEvent);
 
     }
