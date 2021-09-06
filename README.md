@@ -17,3 +17,5 @@ http://localhost:8080/h2-console/
 ```
 and change the value in the `JDBC URL` entry to `jdbc:h2:mem:testdb`.
 The events are in the `QUOTE_EVENT` table.
+
+![h2 console](./artefacts/h2-console.png)
